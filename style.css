@@ -1,0 +1,162 @@
+html,
+body {
+  height: 100%;
+  margin: 0px;
+}
+
+.btn {
+  border-radius: 5px;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  padding: 1em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 10px;
+}
+
+.centered-container, .flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.centered-bg, .gallery-card, .lightbox-img {
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.flex-container {
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.gallery {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-rows: (minmax(200px, 1fr))[3];
+      grid-template-rows: repeat(3, minmax(200px, 1fr));
+  width: 80%;
+  height: 95%;
+  border-radius: 1em;
+}
+
+.gallery-card {
+  background-size: cover;
+}
+
+.lightbox {
+  border-radius: 1em;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: none;
+  position: absolute;
+  background-color: white;
+  z-index: 2;
+  width: 60%;
+  height: 80%;
+}
+
+.lightbox-commentsContainer {
+  text-align: center;
+  height: 100%;
+  text-overflow: ellipsis;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  width: 10%;
+  overflow-y: auto;
+  word-wrap: none;
+  word-break: break-all;
+  background-color: white;
+}
+
+.lightbox-img {
+  background-size: contain;
+  width: 100%;
+  height: 90%;
+  position: relative;
+}
+
+.lightbox-btnscontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  bottom: 10px;
+}
+
+.lightbox-likeBtn-active {
+  padding: 1em;
+  background-image: url(./assets/likered.svg);
+}
+
+.lightbox-likeBtn-inactive {
+  padding: 1em;
+  background-image: url(./assets/like.svg);
+}
+
+.lightbox-closeBtn {
+  position: relative;
+  top: 5px;
+  background-size: cover;
+  padding: 1em;
+  background-image: url(./assets/closebtn.png);
+}
+
+.lightbox-textarea {
+  font-size: 1em;
+  margin: 0 auto;
+}
+
+.isVisible {
+  display: block;
+}
+
+@media only screen and (max-width: 1300px) {
+  .lightbox-commentsContainer {
+    display: none;
+  }
+  body {
+    font-size: 14px;
+  }
+  .btn {
+    margin: 0px;
+    padding: 0.8em;
+  }
+  .lightbox-img {
+    background-size: contain;
+  }
+  .gallery {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (1fr)[5];
+        grid-template-rows: repeat(5, 1fr);
+  }
+}
+/*# sourceMappingURL=style.css.map */

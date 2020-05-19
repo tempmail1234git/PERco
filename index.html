@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="flex-container" id="root">
+        <div id="lightbox" class="lightbox">
+            <div class="lightbox-img" id="lightbox-img">
+                <div class="lightbox-btnscontainer">
+                    <div id="closeBtn" class="lightbox-closeBtn"></div>
+                    <div id="likeBtn" class="lightbox-likeBtn-inactive"></div>
+                </div>
+                <div class="lightbox-commentsContainer">
+                    <h2>Comment:</h2>
+                    <div id="commentTxt"></div>
+                </div>
+            </div>
+            <div class="centered-container">
+                <input
+                    id="commentsInput"
+                    placeholder="Написать комментарий..."
+                    type="textarea"
+                    class="lightbox-textarea"
+                ></input>
+            <button id="changeComment" class="btn">Change</button>
+        </div>
+    </div>
+    <button id="prevBtn" class="btn">Prev</button>
+    <div class="gallery" id="gallery"></div>
+    <button id="nextBtn" class="btn">Next</button>
+</div>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
