@@ -8,7 +8,7 @@ class Gallery {
   async fetchPhotos() {
     let photos = await axios
       .get(
-        `http://jsonplaceholder.typicode.com/photos?_start=${this.page.start}&_limit=${this.page.limit}`
+        `https://jsonplaceholder.typicode.com/photos?_start=${this.page.start}&_limit=${this.page.limit}`
       )
       .then((x) => x.data)
       .catch(function (error) {
